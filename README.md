@@ -1,5 +1,5 @@
 # Proyecto-pensamiento-computacional-s5
 
-#nombre integrantes
+#Nombre integrantes
 > Rafaela Carrasco -
 > Sofía Reyes Antivil
