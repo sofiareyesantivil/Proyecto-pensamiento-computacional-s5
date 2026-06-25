@@ -10,11 +10,11 @@ Haz click  en README.md, luego en `raw` para ve código base de plantilla
 
 ### Título del proyecto
 
-Nombre de proyecto
+Juega con Remy
 
 ### Referencia de origen / bibliografía
 
-Haikú, poema, película, etc. Siempre nombrar autor y año.
+Pelicula animada Ratatouille, año 2007, director Brad Bird.
 
 ### Imagen de referencia de proyecto
 
@@ -22,11 +22,9 @@ Deja acá una imagen de la "portada" de tu proyecto. Como si fuera un afiche. Pu
 
 ### Integrantes
 
-Estudiante A [usuarioGithub](https://github.com/usuarioGithub)
+Sofia Reyes [sofiareyesantivil](https://github.com/usuarioGithub)
 
-Estudiante B [usuarioGithub](https://github.com/usuarioGithub)
-
-Estudiante c [usuarioGithub](https://github.com/usuarioGithub)
+Rafaela Carrasco [rafaelacarrasco-pro](https://github.com/usuarioGithub)
 
 ### Enlace de p5.js 
 
