@@ -10,7 +10,7 @@ Haz click  en README.md, luego en `raw` para ve código base de plantilla
 
 ### Título del proyecto
 
-Juega con Remy
+Juega con Remy.
 
 ### Referencia de origen / bibliografía
 
