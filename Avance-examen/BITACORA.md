@@ -37,6 +37,7 @@ Rafaela Carrasco [rafaelacarrasco-pro](https://github.com/usuarioGithub)
 ![](./img/proceso01.jpg)
 ![](./img/proceso02.jpg)
 ![](./img/procesoOK.jpg)
+![](./img/SKETCH-FINAL.jpg)
 
 ### Estados
 
