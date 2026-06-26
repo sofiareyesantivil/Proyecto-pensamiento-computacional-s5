@@ -39,11 +39,13 @@ Rafaela Carrasco [rafaelacarrasco-pro](https://github.com/usuarioGithub)
 ![](./img/procesoOK.jpg)
 ![](./img/SKETCH-FINAL.jpg)
 
+Al inicio pensamos en combinar dos escenas de ratatuille, la de "explosion de colores" y "remy manejando a linguini sobre su cabeza", pero finalmente nos decidimos por solo hacer la explosion de sabores
+
 ### Estados
 
 Nuestro codigo consta de 6 estados, "PORTADA", "MESA", "TRANSICION", "MENU", "CINE", "FIN", los cuales nos van determinando que partes del skecth se estan dibujando dentro de este, al utilizar la maquina de estados, permite que el programa solo ejecute lo correspondiente a las escenas activas, asi evitamos errores en el codigo. :3
 
-(Todos los gif y botones, portada y contra portada fueron dibujados en pixelart, fondo1 y fondo2, son imagenes sacadas de pinterest)
+(Todos los gif y botones, portada y contra portada fueron dibujados en pixelart, en general el diseño grafico fue hecho por nosotras, por otro lado, fondo1 y fondo2, son imagenes sacadas de pinterest)
 
 #### Estado 1 "PORTADA"
 
