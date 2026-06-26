@@ -12,9 +12,11 @@
 
 Pelicula animada Ratatouille, año 2007, director Brad Bird.
 
+En nuestro trabajo esta inspirado en la escena de "sabores" que esperimente Remy al comer queso y frutilla por primera vez.
+
 ### Imagen de referencia de proyecto
 
-Deja acá una imagen de la "portada" de tu proyecto. Como si fuera un afiche. Puede ser un fotograma de toda la interacción.
+![](./img/MESITA.png)
 
 ### Integrantes
 
@@ -24,47 +26,106 @@ Rafaela Carrasco [rafaelacarrasco-pro](https://github.com/usuarioGithub)
 
 ### Enlace de p5.js 
 
-<https://editor.p5js.org>
+<https://editor.p5js.org/sofia.reyes4/sketches/v-VMQ57cg
 
 ### Relato inicial
 
-Cuenta acá el relato de origen de tu proyecto. Ej, Alicia está con un conejo, luego va a un viaje psicodélico
+"JUEGA CON REMY", te lleva a vivir la experienca de sabores cuando Remy come quesito y frutilla en la pelicula, al interactuar con los botones, estos te llevan a ver la magia, ejemplo al hacer click sobre la frutilla, apareceran formas de distintos tamaños del color de la frutiil, y lo mismo con hacer click en el quesito (en este aparecen de color amarillo).
 
 ### Storyboard
 
-Imágenes del storyboard, las que deben verse acá y estar subidas en el mismo repositorio
+![](./img/proceso01.jpg)
+![](./img/proceso02.jpg)
+![](./img/procesoOK.jpg)
 
 ### Estados
 
-Describe acá los estados de tu máquina (mínimo 3 para proyectos individuales, 6 para parejas, 9 para tríos), y la condición de salida. Incluye la sección de código que muestra ese estado
+Nuestro codigo consta de 6 estados, "PORTADA", "MESA", "TRANSICION", "MENU", "CINE", "FIN", los cuales nos van determinando que partes del skecth se estan dibujando dentro de este, al utilizar la maquina de estados, permite que el programa solo ejecute lo correspondiente a las escenas activas, asi evitamos errores en el codigo. :3
 
-#### Estado 1
+#### Estado 1 "PORTADA"
 
-En el primer estado, con alicia frente al conejo
+En el primer estado que vendria siendo "PORTADA", funciona al presionar "space" en el teclado, esto nos redireccina hacia el segundo estado "MESA".
 
-al hacer scroll, Alicia empieza a caer
+Al haber acionado ya "space", este si es presionado nuevamente no se activara hasta que sea presionado el boton "reiniciar" que sale al final del juego.
 
 ```js
-//alicia cae
-function aliciaEstatica(){
-  //tu alicia quieta acá
-  if (scroll) {
-    caer();
-  }
-}
+ case "PORTADA":
+      image(portada, 0, 0, width, height);
+      break;
+
+function keyPressed() {
+  if (key === " " && estadoActual === "PORTADA") {
+    estadoActual = "MESA";
 ```
 
 
-#### Estado 2
+#### Estado 2 "MENÚ"
 
-Alicia cayendo
+En el estado "MENÚ", existen tres botones que te redireccionan a "CINE", los botones son "frutilla", "quesito", "todito", cada uno de estos genera una gradiante de colores dependiendo del boton.
 
-si pasan 5 segundos, alicia se detiene
+Luego cuando ya hayan sido presionados los tres botones, aparecera un cuarto boton que nos llevara a la contra portada del sketch; "FIN"
 
 ```js
-//alicia cae
-function aliciaCayendo(){
-  //tu alicia quieta acá
-  frameCount blablabla
-}
+case "MENU":
+      image(fondo2, 0, 0, width, height);
+      image(fruta2, 0, 0, width, height);
+
+      let hoverF1 = mouseX >= 10 && mouseX <= 260 && mouseY >= 10 && mouseY <= 260;
+      image(f1, 10, 10, hoverF1 ? 280 : 250, hoverF1 ? 280 : 250);
+
+      let hoverT = mouseX >= 275 && mouseX <= 525 && mouseY >= 10 && mouseY <= 260;
+      image(todito, 275, 10, hoverT ? 280 : 250, hoverT ? 280 : 250);
+
+      let hoverQ = mouseX >= 540 && mouseX <= 790 && mouseY >= 10 && mouseY <= 260;
+      image(quesito2, 540, 10, hoverQ ? 280 : 250, hoverQ ? 280 : 250);
+
+      if (vistoFrutilla && vistoQueso && vistoTodo) {
+        let tbcX = 500; 
+        let tbcY = 590; 
+        let tbcSize = 250;
+        let hoverTBC = mouseX >= tbcX && mouseX <= tbcX + tbcSize && mouseY >= tbcY && mouseY <= tbcY + tbcSize;
+        
+        image(TBC, tbcX, tbcY, hoverTBC ? 280 : 250, hoverTBC ? 280 : 250);
+      }
+      break;
+
+//////////
+
+ case "MENU":
+      if (mouseX >= 10 && mouseX <= 260 && mouseY >= 10 && mouseY <= 260) {}
+      else if (vistoFrutilla && vistoQueso && vistoTodo) {
+        let tbcX = 500; 
+        let tbcY = 590; 
+        let tbcSize = 250;
+        if (mouseX >= tbcX && mouseX <= tbcX + tbcSize && mouseY >= tbcY && mouseY <= tbcY + tbcSize) {
+          estadoActual = "FIN";
+        }
+      }
+      break;
+```
+
+#### Estado 3 "FIN"
+
+En este estado llegamos al final del juego, al haber presionado el boton "TBC" este nos redirecciona hacia la contra portada, activado el estado "FIN", donde aparecen los creditos y ademas un boton de reinicio, que al ser clickeado, nos lleva diretamente al iicion de todo el sketch y se reinicia el juego.
+
+Ademas durante el juego, luego de haber presionado "space" empieza a sonar la musica, el boton "reiniciar" hace que la musica pare.
+
+```js
+ case "FIN":
+      image(fin, 0, 0, width, height);
+      
+      let reinX = 620; 
+      let reinY = 620;
+      let hoverRein = mouseX >= reinX && mouseX <= reinX + tam4 && mouseY >= reinY && mouseY <= reinY + tam4;
+      
+      image(reiniciar, reinX, reinY, hoverRein ? 200 : tam4, hoverRein ? 200 : tam4);
+      break;
+////
+  case "FIN":
+      let reinX = 620;
+      let reinY = 620;
+      if (mouseX >= reinX && mouseX <= reinX + tam4 && mouseY >= reinY && mouseY <= reinY + tam4) {
+        resetAnimacion();
+      }
+      break;
 ```
