@@ -19,7 +19,7 @@ let yFondo2Final;
 let portada, fruta, fruta2;
 let f1, quesito2, todito;
 let flecha1, flecha2;
-let TBC, fin, reiniciar; 
+let TBC, fin, reiniciar, clickea;
 
 // GIFS 
 let gif1, gif2, comequesito, comefrutilla, secometodo;
@@ -32,10 +32,10 @@ let festin;
 let x, y;
 let xFruta, yFruta;
 
-// CONTROL DE LÓGICA 
+
 let mostrarFlecha = false; 
 
-// memoria para saber qué botones ya se presionaron (por ejemplo "scape" si ya fue presionado no volvera a funcionar si se vuelve a presionar, se activa nuevamente al empezar otra vez el juego)
+// Memoria para saber qué botones ya se presionaron (por ejemplo "scape" si ya fue presionado no volvera a funcionar si se vuelve a presionar, se activa nuevamente al empezar otra vez el juego)
 let vistoFrutilla = false;
 let vistoQueso = false;
 let vistoTodo = false;
@@ -71,6 +71,8 @@ function preload() {
   TBC = loadImage("img/continuara.png");
   fin = loadImage("img/finremy.png");
   reiniciar = loadImage("img/repetir.png");
+  
+  clickea = loadImage("img/clicky.png"); 
 
   festin = loadSound("song/lefestin.mp3");
 
@@ -79,6 +81,15 @@ function preload() {
 function setup() {
   createCanvas(800, 800);
   imageMode(CORNER);
+  
+  // VELOCIDAD DE LOS GIFS
+  // Modifica los milisegundos para ajustar la velocidad (número menor = más rápido)
+  if (gif1) gif1.delay(150); 
+  if (gif2) gif2.delay(150); 
+  if (comequesito) comequesito.delay(150);
+  if (comefrutilla) comefrutilla.delay(150);
+  if (secometodo) secometodo.delay(150);
+
   resetAnimacion();
 }
 
@@ -104,7 +115,7 @@ function resetAnimacion() {
   
   sabores = [];
 
-// detenemos la música si el boton "reiniciar" es presionado
+// se detiene la música si el boton "reiniciar" es presionado
   if (festin && festin.isPlaying()) {
     festin.stop();
   }
@@ -149,6 +160,9 @@ function draw() {
       if (mostrarFlecha) {
         image(flecha1, 620, 620, tam4, tam4);
       }
+      
+      // clicky aparece solo en MESA
+      image(clickea, mouseX - 25, mouseY - 25, 50, 50); 
       break;
 
     case "TRANSICION":
@@ -197,6 +211,9 @@ function draw() {
 
       image(flecha2, 20, 620, tam4, tam4);
       dibujarSabores(saborActual);
+      
+      // clicky aparece solo en CINE
+      image(clickea, mouseX - 25, mouseY - 25, 50, 50);
       break;
 
     case "FIN":
@@ -265,7 +282,7 @@ function keyPressed() {
   if (key === " " && estadoActual === "PORTADA") {
     estadoActual = "MESA";
     
-// la cancion le festin se repoduce luego de la portada al apretar "space" y le pusimos .loop() para que se repita si se acaba
+// La cancion le festin se repoduce luego de la portada al apretar "space" y le pusimos .loop() para que se repita si se acaba
     if (festin && !festin.isPlaying()) {
       festin.loop();
     }
