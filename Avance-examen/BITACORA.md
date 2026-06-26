@@ -43,6 +43,8 @@ Rafaela Carrasco [rafaelacarrasco-pro](https://github.com/usuarioGithub)
 
 Nuestro codigo consta de 6 estados, "PORTADA", "MESA", "TRANSICION", "MENU", "CINE", "FIN", los cuales nos van determinando que partes del skecth se estan dibujando dentro de este, al utilizar la maquina de estados, permite que el programa solo ejecute lo correspondiente a las escenas activas, asi evitamos errores en el codigo. :3
 
+(Todos los gif y botones, portada y contra portada fueron dibujados en pixelart, fondo1 y fondo2, son imagenes sacadas de pinterest)
+
 #### Estado 1 "PORTADA"
 
 En el primer estado que vendria siendo "PORTADA", funciona al presionar "space" en el teclado, esto nos redireccina hacia el segundo estado "MESA".
