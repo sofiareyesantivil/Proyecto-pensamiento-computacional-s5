@@ -82,8 +82,8 @@ function setup() {
   createCanvas(800, 800);
   imageMode(CORNER);
   
-  // VELOCIDAD DE LOS GIFS
-  // Modifica los milisegundos para ajustar la velocidad (número menor = más rápido)
+  // VELOCIDAD DE LOS GIF
+  
   if (gif1) gif1.delay(150); 
   if (gif2) gif2.delay(150); 
   if (comequesito) comequesito.delay(150);
