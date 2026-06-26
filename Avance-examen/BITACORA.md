@@ -39,7 +39,7 @@ Rafaela Carrasco [rafaelacarrasco-pro](https://github.com/usuarioGithub)
 ![](./img/procesoOK.jpg)
 ![](./img/SKETCH-FINAL.jpg)
 
-Al inicio pensamos en combinar dos escenas de ratatuille, la de "explosion de colores" y "remy manejando a linguini sobre su cabeza", pero finalmente nos decidimos por solo hacer la explosion de sabores
+Al inicio pensamos en combinar dos escenas de ratatouille, la de "explosion de colores" y "remy manejando a linguini sobre su cabeza", pero finalmente nos decidimos por solo hacer la explosion de sabores
 
 ### Estados
 
