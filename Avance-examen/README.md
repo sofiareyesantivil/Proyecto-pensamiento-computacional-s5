@@ -1,8 +1,4 @@
-# Clase 10
-
-## Plantilla examen
-
-Haz click  en README.md, luego en `raw` para ve código base de plantilla
+## Examen
 
 ## Link de web pública (github pages)
 
