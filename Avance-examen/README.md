@@ -2,11 +2,11 @@
 
 ## Link de web pública (github pages)
 
-<https://link.com>
+<https://github.com/sofiareyesantivil/Proyecto-pensamiento-computacional-s5/tree/main
 
 ### Título del proyecto
 
-Juega con Remy.
+"Juega con Remy"
 
 ### Referencia de origen / bibliografía
 
